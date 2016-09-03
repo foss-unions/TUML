@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tradeunion GTUUID="AB:CD:EF:GH:00001" Type="TU"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xsi:noNamespaceSchemaLocation="TUML.xsd">
+
+  <!-- Meta information about this union, updated dates, etc -->
+  <meta>
+    <logoimages>
+      <logoimage type="standard" URL="http://test.url/logo.png" size="x-small" /> <!-- x-small, small, medium, large, x-large -->
+    </logoimages>
+    <history>
+      <createdon>1/1/1900</createdon>
+      <updatedon>1/1/1900</updatedon>
+      <statuses>
+        <status from="01/01/1900" to="" statuscode="Current" />
+        <status from="01/01/1900" to="" statuscode="Merged" />
+        <status from="01/01/1900" to="" statuscode="Closed" />
+      </statuses>
+    </history>
+  </meta>
+
+  <identifications>
+    <Identification Type="WorldCat" Value="XX-XX-XXXX" />
+    <Identification Type="VIAF" Value="135585641" />
+  </identifications>
+
+  <!-- The names the union identifies with, or incorporates when merging -->
+  <names>
+    <!--
+      Type:
+        OFF = Official
+        AKA = Also Known As
+        MRG = Incorporates another union with the name, due to merger
+    -->
+    <name type="OFF" lang="en">International Workers of the World</name>
+    <name type="OFF" lang="jp">世界産業労働組合</name>
+    <name type="AKA" lang="en">Wobblies</name>
+    <name type="MRG" lang="en">Example Merged Union Name</name>
+  </names>
+
+  <relationships>
+    <!--
+      Type:
+        Parent
+        Child
+        Group
+    -->
+    <relationship Type="Parent" ref="test"></relationship>
+
+  </relationships>
+
+  <industries>
+    <industry SIC="00000"></industry>
+    <industry SIC="00000"></industry>
+  </industries>
+</tradeunion>

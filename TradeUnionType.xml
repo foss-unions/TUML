@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnionTypes>
+  <UnionType Name="Confederation" Code="CO">
+    <Names>
+      <Name type="AKA" xml:lang="en">Conference</Name>
+      <Name type="AKA" xml:lang="en">Trades Union Conference</Name>
+      <Name type="OFF" xml:lang="jp">連合</Name>
+    </Names>
+    <Description>
+      A grouping of unions together either nationally or internationally.
+    </Description>
+  </UnionType>
+  <UnionType Name="Trade Union" Code="TU">
+    <Names>
+      <Name type="OFF" xml:lang="jp">労働組合</Name>
+    </Names>
+    <Description>
+      A group of individuals joined together for the purpose of collective bargaining.
+    </Description>
+  </UnionType>
+  <UnionType Name="Trade Union Branch" Code="BR">
+    <Names>
+      <Name type="OFF" xml:lang="jp">支部</Name>
+    </Names>
+    <Description>
+      A subdivision of a trade union.
+    </Description>
+  </UnionType>
+</UnionTypes>
