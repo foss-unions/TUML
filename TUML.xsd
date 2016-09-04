@@ -7,13 +7,7 @@
 <!-- Types -->
 
 <!-- Type: Language Type -->
-<xs:simpleType name="language" id="language">
- <xs:restriction base="xs:token">
- <xs:pattern
- value="([a-zA-Z]{2}|[iI]-[a-zA-Z]+|[xX]-[a-zA-Z]{1,8})(-[a-zA-Z]{1,8})*"
- />
- </xs:restriction>
-</xs:simpleType>
+
 
 <!-- Todo: Status codes -->
 
@@ -97,17 +91,6 @@
                                                    <xs:complexType>
                                                          <xs:attribute name="Type" type="xs:string"></xs:attribute>
                                                          <xs:attribute name="ref" type="xs:string"></xs:attribute>
-                                                   </xs:complexType>
-                                             </xs:element>
-                                       </xs:sequence>
-                                 </xs:complexType>
-                           </xs:element>
-                           <xs:element name="industries">
-                                 <xs:complexType>
-                                       <xs:sequence>
-                                             <xs:element name="industry" maxOccurs="unbounded">
-                                                   <xs:complexType>
-                                                         <xs:attribute name="SIC" type="xs:string"></xs:attribute>
                                                    </xs:complexType>
                                              </xs:element>
                                        </xs:sequence>

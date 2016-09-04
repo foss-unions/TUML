@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tradeunion GTUUID="AB:CD:EF:GH:00001" Type="TU"
+<tradeunion GTUUID="AB:CD:EF:GH:00001"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
   xsi:noNamespaceSchemaLocation="TUML.xsd">
@@ -49,9 +49,4 @@
     <relationship Type="Parent" ref="test"></relationship>
 
   </relationships>
-
-  <industries>
-    <industry SIC="00000"></industry>
-    <industry SIC="00000"></industry>
-  </industries>
 </tradeunion>
