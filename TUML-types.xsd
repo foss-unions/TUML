@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--
+    tostatus
+    The status code of a status history in a union's history. This refers to dates when a union merged, closed, or is currently constituted.
+  -->
+  <xs:simpleType name="tu_history_status" id="tu_history_status">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="(closed|merged|current)" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--
+    GTUUID
+    The Global Trade Union Unique ID - one ID per union, branch.
+  -->
+  <xs:simpleType name="tu_gtuuid" id="tu_gtuuid">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="language" id="language">
+   <xs:restriction base="xs:token">
+   <xs:pattern
+   value="([a-zA-Z]{2}|[iI]-[a-zA-Z]+|[xX]-[a-zA-Z]{1,8})(-[a-zA-Z]{1,8})*"
+   />
+   </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
