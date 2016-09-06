@@ -34,7 +34,11 @@ Free Documentation License".
     </address>
     <website>https://www.balpa.org/</website>
     <contacts>
-      <contact type="Phone">+442084764000</contact>
+      <contact type="Phone" context="Regular">+442084764000</contact>
+      <contact type="Phone" context="Emergency">+442084764077</contact>
+      <contact type="E-mail" context="Regular">balpa@balpa.org</contact>
+      <contact type="Facebook" context="Regular">http://www.facebook.com/BALPApilots/</contact>
+      <contact type="Twitter" context="Regular">http://www.twitter.com/BALPApilots/</contact>
     </contacts>
 </basicinformation>
 
@@ -98,4 +102,47 @@ Free Documentation License".
 <events>
   <event type="Annual">Annual Delegate Conference</event>
 </events>
+
+<workplaces>
+  <workplace from="2000-01-01" status="Recognised">
+    <name>British Airways PLC</name>
+    <industrycode>511</industrycode>
+    <industryname>Passenger air transport</industryname>
+    <identifications>
+      <identification type="UKCH">01777777</identification>
+    </identifications>
+  </workplace>
+  <workplace from="2000-01-01" status="Recognised">
+    <name>Thomson Airways Limited</name>
+    <industrycode>511</industrycode>
+    <industryname>Passenger air transport</industryname>
+    <identifications>
+      <identification type="UKCH">00444359</identification>
+    </identifications>
+  </workplace>
+  <workplace from="2000-01-01" status="Recognised">
+    <name>Virgin Atlantic International Limited</name>
+    <industrycode>511</industrycode>
+    <industryname>Passenger air transport</industryname>
+    <identifications>
+      <identification type="UKCH">09539561</identification>
+    </identifications>
+  </workplace>
+  <workplace from="2016-01-01" status="Recognised">
+    <name>EasyJet Airline Company Limited</name>
+    <industrycode>511</industrycode>
+    <industryname>Passenger air transport</industryname>
+    <identifications>
+      <identification type="UKCH">03034606</identification>
+    </identifications>
+  </workplace>
+  <workplace from="2016-01-01" status="Unrecognised">
+    <name>RyanAir Limited</name>
+    <industrycode>511</industrycode>
+    <industryname>Passenger air transport</industryname>
+    <identifications>
+      <identification type="UKCH">04176251</identification>
+    </identifications>
+  </workplace>
+</workplaces>
 </tradeunion>

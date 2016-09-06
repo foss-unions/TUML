@@ -45,6 +45,21 @@ Free Documentation License".
   </xs:restriction>
 </xs:simpleType>
 
+<xs:simpleType name="gen_st_contact_context" id="gen_st_contact_context">
+  <xs:annotation>
+    <xs:documentation>
+    CONTACT CONTEXT
+
+    What context the contact is to be used.
+  </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="Regular" />
+    <xs:enumeration value="Emergency" />
+    <xs:enumeration value="Legal" />
+  </xs:restriction>
+</xs:simpleType>
+
 <xs:simpleType name="gen_st_image_type" id="gen_st_image_type">
   <xs:annotation>
     <xs:documentation>
@@ -249,6 +264,19 @@ Free Documentation License".
   </xs:restriction>
 </xs:simpleType>
 
+<xs:simpleType name="tu_st_workplace_status" id="tu_st_workplace_status">
+  <xs:annotation>
+    <xs:documentation>
+    TRADE UNION WORKPLACE STATUS
+    The status of workplaces with regard to recognition and union activity.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="Non-recognised" />
+    <xs:enumeration value="Recognised" />
+  </xs:restriction>
+</xs:simpleType>
+
 <xs:simpleType name="tu_st_structure_type" id="tu_st_structure_type">
   <xs:annotation>
     <xs:documentation>
@@ -312,6 +340,7 @@ Free Documentation License".
     UKLN = UK Government Union List Number
     VIAF = Virtual Internet Identity File
     LCCN = Library of Congress Catalog Number
+    UKCH = Companies House Registration Number
     </xs:documentation>
   </xs:annotation>
   <xs:restriction base="xs:token">
@@ -320,6 +349,7 @@ Free Documentation License".
     <xs:enumeration value="VIAF" />
     <xs:enumeration value="ISNI" />
     <xs:enumeration value="LCCN" />
+    <xs:enumeration value="UKCH" />
   </xs:restriction>
 </xs:simpleType>
 
@@ -413,6 +443,42 @@ Free Documentation License".
   <xs:attribute name="role" type="tu_st_person_role_type" />
   <xs:attribute name="from" type="xs:date" />
   <xs:attribute name="to" type="xs:date" />
+</xs:complexType>
+
+<xs:complexType name="tu_ct_workplace" id="tu_ct_workplace">
+  <xs:annotation>
+    <xs:documentation>
+      WORKPLACE
+
+      A type for a workplace.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:sequence>
+    <xs:element name="name" type="xs:string">
+      <xs:simpleContent>
+        <xs:restriction base="xs:string" />
+      </xs:simpleContent>
+    </xs:element>
+    <xs:element name="industrycode" type="xs:string">
+      <xs:simpleContent>
+        <xs:restriction base="xs:string" />
+      </xs:simpleContent>
+    </xs:element>
+    <xs:element name="industryname" type="xs:string">
+      <xs:simpleContent>
+        <xs:restriction base="xs:string" />
+      </xs:simpleContent>
+    </xs:element>
+    <xs:element name="identifications">
+      <xs:complexType>
+        <xs:element name="identification" type="tu_st_identification_type" />
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="address" type="PostalAddressType" />
+  </xs:sequence>
+  <xs:attribute name="from" type="xs:date" />
+  <xs:attribute name="to" type="xs:date" />
+  <xs:attribute name="status" type="tu_st_workplace_status" />
 </xs:complexType>
 
 </xs:schema>
