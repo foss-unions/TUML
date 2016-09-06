@@ -1,3 +1,13 @@
+<!--
+Copyright (C)  2016  Jordan Ashley Craw
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema
   xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -175,37 +185,37 @@
       <xs:documentation>
       POSTAL ADDRESS TYPE
 
-      HR-XML postal address type.
+      HR-XML postal address type. Amended to lowercase.
       </xs:documentation>
     </xs:annotation>
 		<xs:sequence>
-			<xs:element name="CountryCode">
+			<xs:element name="countrycode">
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
 						<xs:pattern value="[A-Z]{2}"/>
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="PostalCode" type="xs:string" minOccurs="0"/>
-			<xs:element name="Region" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="Municipality" type="xs:string" minOccurs="0"/>
-			<xs:element name="DeliveryAddress" minOccurs="0">
+			<xs:element name="postalcode" type="xs:string" minOccurs="0"/>
+			<xs:element name="region" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="municipality" type="xs:string" minOccurs="0"/>
+			<xs:element name="deliveryaddress" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="AddressLine" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-						<xs:element name="StreetName" type="xs:string" minOccurs="0"/>
-						<xs:element name="BuildingNumber" type="xs:string" minOccurs="0"/>
-						<xs:element name="Unit" type="xs:string" minOccurs="0"/>
-						<xs:element name="PostOfficeBox" type="xs:string" minOccurs="0"/>
+						<xs:element name="addressline" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="streetname" type="xs:string" minOccurs="0"/>
+						<xs:element name="buildingnumber" type="xs:string" minOccurs="0"/>
+						<xs:element name="unit" type="xs:string" minOccurs="0"/>
+						<xs:element name="postofficebox" type="xs:string" minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="Recipient" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="recipient" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="PersonName" type="PersonNameType" minOccurs="0"/><!-- Amended to xs:string from HR-XML original -->
-						<xs:element name="AdditionalText" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-						<xs:element name="OrganizationName" type="xs:string" minOccurs="0"/>
+						<xs:element name="personname" type="PersonNameType" minOccurs="0"/><!-- Amended to xs:string from HR-XML original -->
+						<xs:element name="additionaltext" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="organizationname" type="xs:string" minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -213,10 +223,9 @@
 		<xs:attribute name="type">
 			<xs:simpleType>
 				<xs:restriction base="xs:string">
-					<xs:enumeration value="postOfficeBoxAddress"/>
-					<xs:enumeration value="streetAddress"/>
-					<xs:enumeration value="militaryAddress"/>
-					<xs:enumeration value="undefined"/>
+					<xs:enumeration value="Post Office Box Address"/>
+					<xs:enumeration value="Street Address"/>
+					<xs:enumeration value="Military Address"/>
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
@@ -238,6 +247,58 @@
     <xs:enumeration value="Founded" />
     <xs:enumeration value="Re-formed" />
   </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tu_st_structure_type" id="tu_st_structure_type">
+  <xs:annotation>
+    <xs:documentation>
+    TRADE UNION STRUCTURES
+
+    A type of trade union structure (i.e. Commitee, Council, Executive)
+    </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="Executive Committee" />
+    <xs:enumeration value="Committee" />
+    <xs:enumeration value="Council" />
+    <xs:enumeration value="Executive" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tu_st_event_type" id="tu_st_event_type">
+  <xs:annotation>
+    <xs:documentation>
+    TRADE UNION EVENT TYPE
+
+    A type of trade union event.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="Annual" />
+    <xs:enumeration value="Bi-Annual" />
+    <xs:enumeration value="Quarterly" />
+    <xs:enumeration value="Monthly" />
+    <xs:enumeration value="Weekly" />
+    <xs:enumeration value="Bi-Weekly" />
+    <xs:enumeration value="Daily" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="tu_st_relationship_type" id="tu_st_relationship_type">
+  <xs:annotation>
+    <xs:documentation>
+    TRADE UNION RELATIONSHIP TYPE
+
+    Relationships that a trade union entity retains with other trade union entities.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:simpleContent>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="Parent" />
+      <xs:enumeration value="Child" />
+      <xs:enumeration value="Association" />
+    </xs:restriction>
+  </xs:simpleContent>
 </xs:simpleType>
 
 
@@ -288,6 +349,7 @@
     <xs:enumeration value="Executive Chairperson" />
     <xs:enumeration value="Executive Vice Chairperson" />
     <xs:enumeration value="Trustee" />
+    <xs:enumeration value="Treasurer" />
     <xs:enumeration value="Registered Contact" />
   </xs:restriction>
 </xs:simpleType>

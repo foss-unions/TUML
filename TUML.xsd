@@ -1,3 +1,13 @@
+<!--
+Copyright (C)  2016  Jordan Ashley Craw
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+-->
+
 <?xml version="1.0" encoding="UTF-8"?>
    <xs:schema
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -11,7 +21,7 @@
                       <xs:element name="basicinformation">
                         <xs:complexType>
                           <xs:all>
-                            <xs:element name="name" type="tu_ct_name" />
+                            <xs:element name="name" type="xs:string" />
                             <xs:element name="othernames">
                                   <xs:complexType>
                                         <xs:sequence>
@@ -19,6 +29,7 @@
                                         </xs:sequence>
                                   </xs:complexType>
                             </xs:element>
+                            <xs:element name="address" type="PostalAddressType" />
                             <xs:element name="website" type="xs:anyURI"></xs:element>
                             <xs:element name="contacts">
                               <xs:complexType>
@@ -99,11 +110,11 @@
                        <xs:element name="people">
                           <xs:complexType>
                             <xs:sequence>
-                              <xs:element name="person" type="tu_ct_person"></xs:element>
+                              <xs:element name="person" type="tu_ct_person" minOccurs="1" maxOccurs="unbounded"></xs:element>
                             </xs:sequence>
                           </xs:complexType>
                         </xs:element>
-                       <xs:element name="relationships">
+                       <xs:element name="relationships" minOccurs="0" maxOccurs="1">
                              <xs:complexType>
                                    <xs:sequence>
                                          <xs:element name="relationship">
@@ -114,6 +125,26 @@
                                          </xs:element>
                                    </xs:sequence>
                              </xs:complexType>
+                       </xs:element>
+                       <xs:element name="structures" minOccurs="0" maxOccurs="1">
+                         <xs:complexType>
+                           <xs:element name="structure" minOccurs="0" maxOccurs="1">
+                             <xs:simpleContent>
+                                <xs:restriction base="xs:string">
+                                 <xs:attribute name="type" type="tu_st_structure_type" />
+                                </xs:restriction>
+                             </xs:simpleContent>
+                           </xs:element>
+                         </xs:complexType>
+                       </xs:element>
+                       <xs:element name="events">
+                        <xs:complexType>
+                          <xs:simpleContent>
+                            <xs:restriction base="xs:string">
+                              <xs:attribute name="type" type="tu_st_event_type" />
+                            </xs:restriction>
+                          </xs:simpleContent>
+                        </xs:complexType>
                        </xs:element>
                  </xs:sequence>
                  <xs:attribute name="GTUUID" type="xs:string"></xs:attribute>
