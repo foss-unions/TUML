@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tradeunion GTUUID="AB:CD:EF:GH:00001"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xsi:noNamespaceSchemaLocation="TUML.xsd">
+
+<basicinformation>
+    <name>British Air Line Pilots Association</name>
+    <othernames>
+    <othername type="Acronym" lang="en">BALPA</othername>
+    </othernames>
+    <website>https://www.balpa.org/</website>
+    <contacts>
+      <contact type="Phone">+442084764000</contact>
+    </contacts>
+</basicinformation>
+
+<!-- Meta information about this union, updated dates, etc -->
+<meta>
+  <logoimages>
+    <logoimage type="standard" src="http://test.url/logo.png" size="x-small" /> <!-- x-small, small, medium, large, x-large -->
+  </logoimages>
+  <history>
+    <createdon>2016-06-09</createdon>
+    <updatedon>2016-06-09</updatedon>
+    <statuses>
+      <status statuscode="Founded" from="1937-27-06" />
+    </statuses>
+  </history>
+</meta>
+
+<identifications>
+  <Identification Type="UKLN">70</Identification>
+  <Identification Type="VIAF">157655262</Identification>
+  <Identification Type="ISNI">0000 0001 0527 9168</Identification>
+  <Identification Type="LOC">nr2004013671</Identification>
+</identifications>
+
+<people>
+  <person role="General Secretary" from="2016-01-01">
+    <personaldetail>
+      <GivenName>Brian</GivenName>
+      <FamilyName>Strutton</FamilyName>
+      <Affix type="formOfAddress">Mr</Affix>
+    </personaldetail>
+    <contactdetail>
+      <contact type="Phone">+442084764025</contact>
+      <contact type="Email">+442084764025</contact>
+    </contactdetail>
+  </person>
+</people>
+
+<relationships>
+  <relationship Type="Parent" ref="test"></relationship>
+</relationships>
+
+</tradeunion>

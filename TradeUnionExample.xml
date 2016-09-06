@@ -7,8 +7,15 @@
   <!-- Meta information about this union, updated dates, etc -->
   <meta>
     <logoimages>
-      <logoimage type="standard" URL="http://test.url/logo.png" size="x-small" /> <!-- x-small, small, medium, large, x-large -->
+      <logoimage type="standard" src="http://test.url/logo.png" size="x-small" /> <!-- x-small, small, medium, large, x-large -->
     </logoimages>
+    <website>http://test.website/compo/</website>
+    <contacts>
+      <contact type="phone"></contact>
+      <contact type="e-mail"></contact>
+      <contact type="twitter"></contact>
+      <contact type="facebook"></contact>
+    </contacts>
     <history>
       <createdon>1/1/1900</createdon>
       <updatedon>1/1/1900</updatedon>
@@ -25,14 +32,15 @@
     <Identification Type="VIAF" Value="135585641" />
   </identifications>
 
-  <!-- The names the union identifies with, or incorporates when merging -->
+  <people>
+    <person role="General Secretary">
+      <GivenName></GivenName>
+      <FamilyName></FamilyName>
+      <Affix type="formOfAddress">Captain</Affix>
+    </person>
+  </people>
+
   <names>
-    <!--
-      Type:
-        OFF = Official
-        AKA = Also Known As
-        MRG = Incorporates another union with the name, due to merger
-    -->
     <name type="OFF" lang="en">International Workers of the World</name>
     <name type="OFF" lang="jp">世界産業労働組合</name>
     <name type="AKA" lang="en">Wobblies</name>
@@ -40,13 +48,7 @@
   </names>
 
   <relationships>
-    <!--
-      Type:
-        Parent
-        Child
-        Group
-    -->
     <relationship Type="Parent" ref="test"></relationship>
-
   </relationships>
+
 </tradeunion>
