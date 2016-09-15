@@ -1,17 +1,6 @@
-<!--
-Copyright (C)  2016  Jordan Ashley Craw
-Permission is granted to copy, distribute and/or modify this document
-under the terms of the GNU Free Documentation License, Version 1.3
-or any later version published by the Free Software Foundation;
-with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-A copy of the license is included in the section entitled "GNU
-Free Documentation License".
--->
-
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <tradeunion GTUUID="AB:CD:EF:GH:00001"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:xml="http://www.w3.org/XML/1998/namespace"
   xsi:noNamespaceSchemaLocation="TUML.xsd">
 
 <basicinformation>
@@ -42,7 +31,6 @@ Free Documentation License".
     </contacts>
 </basicinformation>
 
-<!-- Meta information about this union, updated dates, etc -->
 <meta>
   <logoimages>
     <logoimage type="standard" src="http://www.balpa.org/BALPAMainSite/media/BALPA-website-images/illustration_balpa.png" size="x-small" /> <!-- x-small, small, medium, large, x-large -->
@@ -60,7 +48,7 @@ Free Documentation License".
   <Identification Type="UKLN">70</Identification>
   <Identification Type="VIAF">157655262</Identification>
   <Identification Type="ISNI">0000 0001 0527 9168</Identification>
-  <Identification Type="LOC">nr2004013671</Identification>
+  <Identification Type="LCCN">nr2004013671</Identification>
 </identifications>
 
 <people>
@@ -72,7 +60,7 @@ Free Documentation License".
     </personaldetail>
     <contactdetail>
       <contact type="Phone">+442084764025</contact>
-      <contact type="Email">brianstrutton@balpa.org</contact>
+      <contact type="E-mail">brianstrutton@balpa.org</contact>
     </contactdetail>
   </person>
   <person role="Treasurer" from="2016-01-01">
@@ -83,7 +71,7 @@ Free Documentation License".
     </personaldetail>
     <contactdetail>
       <contact type="Phone">+442084764063</contact>
-      <contact type="Email">julierutley@balpa.org</contact>
+      <contact type="E-mail">julierutley@balpa.org</contact>
     </contactdetail>
   </person>
 </people>
@@ -94,9 +82,9 @@ Free Documentation License".
 
 <structures>
   <structure type="Executive Committee">National Executive Committee</structure>
-  <structure type="Commitee">Helicopter Affairs Commitee</structure>
-  <structure type="Commitee">Flight Safety and Security Commitee</structure>
-  <structure type="Commitee">Retired Flight Crew Commitee</structure>
+  <structure type="Committee">Helicopter Affairs Commitee</structure>
+  <structure type="Committee">Flight Safety and Security Commitee</structure>
+  <structure type="Committee">Retired Flight Crew Commitee</structure>
 </structures>
 
 <events>
@@ -136,7 +124,7 @@ Free Documentation License".
       <identification type="UKCH">03034606</identification>
     </identifications>
   </workplace>
-  <workplace from="2016-01-01" status="Unrecognised">
+  <workplace from="2016-01-01" status="Non-Recognised">
     <name>RyanAir Limited</name>
     <industrycode>511</industrycode>
     <industryname>Passenger air transport</industryname>
