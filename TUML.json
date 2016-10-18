@@ -1,0 +1,92 @@
+{
+  "tradeunion" : {
+    "GTUUID" : "",
+    "basic_information" : {
+      "name" : "",
+      "othernames" : [
+        {
+          "type" : "",
+          "lang" : "",
+          "value" : ""
+        }
+      ],
+      "address" : {
+        "type" : "",
+        "countrycode": "",
+        "postalcode": "",
+        "region": "",
+        "municipality": "",
+        "deliveryaddress": {
+          "addresslines": [
+            "",""
+          ]
+        },
+        "recipient" : {
+          "organizationname" : ""
+        },
+        "website" : "",
+        "contacts" : [
+          {
+            "type" :"",
+            "context" : "",
+            "value" : ""
+          }
+        ]
+      }
+    },
+    "meta" : {
+      "logoimages" : [
+        {
+          "type" : "",
+          "src" : ""
+        }
+      ],
+      "history" : {
+        "createdon" : "",
+        "updatedon" : "",
+        "statuses" : [
+          {
+            "statuscode" :"",
+            "from" : "",
+            "to" : ""
+          }
+        ]
+      }
+    },
+    "identifications" : [
+      {
+        "type" : "",
+        "value" : ""
+      }
+    ],
+    "people" : [
+      {
+        "role" : "",
+        "from" : "",
+        "to" : "",
+        "personaldetail" : {
+          "givenname" : "",
+          "familyname" :"",
+          "affix" : "",
+        },
+        "contactdetail" : {
+          "type" : "",
+          "value" : ""
+        }
+      }
+    ],
+    "structures" : [
+      {
+        "type" : "",
+        "name" : "",
+        "description" : ""
+      }
+    ],
+    "events" : [
+      {
+        "type" : "",
+        "value" : ""
+      }
+    ]
+  }
+}
